@@ -24,7 +24,9 @@ class Pipe {
 
   // Opdater rørets position
   void update() {
+    if (gameStart == true){
     x += dx;
+    }
     if (outOfCanvas() == true) {
       x = width;
       y = random(200, 600);
