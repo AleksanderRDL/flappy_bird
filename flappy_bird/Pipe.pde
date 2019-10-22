@@ -6,11 +6,11 @@ class Pipe {
   float h; // Hullets størrelse
 
   // Constructor til nye pipes
-  Pipe() {
-    x = width-100;
+  Pipe(int tempX, int tempY) {
+    x = tempX;
     dx = -1;
     w = 30;
-    y = height/2-75;
+    y = tempY;
     h = 150;
   }
 
@@ -24,7 +24,10 @@ class Pipe {
   // Opdater rørets position
   void update() {
     x += dx;
-    println(outOfCanvas());
+    if (outOfCanvas() == true){
+      x = width;
+      y = random(200,600);
+    }
   }
 
   // Metode, der tjekker om røret er
