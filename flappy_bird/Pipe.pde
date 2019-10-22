@@ -8,7 +8,7 @@ class Pipe {
   // Constructor til nye pipes
   Pipe() {
     x = width-100;
-    dx = 0;
+    dx = -1;
     w = 30;
     y = height/2-75;
     h = 150;
@@ -23,6 +23,8 @@ class Pipe {
 
   // Opdater rørets position
   void update() {
+    x += dx;
+    println(outOfCanvas());
   }
 
   // Metode, der tjekker om røret er
@@ -37,7 +39,7 @@ class Pipe {
   // Metode, der returnerer true, når røret er uden
   // for canvas. Ellers false
   boolean outOfCanvas() {
-    if (x < - w) {
+    if (x+w < 0) {
       return true;
     } else {
       return false;
