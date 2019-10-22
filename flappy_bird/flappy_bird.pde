@@ -1,11 +1,12 @@
 Bird b;
 Pipe p;
 Pipe p2;
+boolean gameStart;
 
 void setup() {
   size(600, 800);
   noStroke();
-
+  gameStart = false;
   b = new Bird();
   p = new Pipe(width+100, int(random(200, 600)));
   p2 = new Pipe(width+425, int(random(200, 600)));
@@ -25,6 +26,7 @@ void keyPressed() {
   if (key == ' ') {
     b.dy=0;
     b.flap();
+    gameStart = true;
   }
 }
 
