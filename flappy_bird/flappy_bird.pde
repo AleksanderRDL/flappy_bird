@@ -3,12 +3,12 @@ Pipe p;
 Pipe p2;
 
 void setup() {
-  size(500, 800);
+  size(600, 800);
   noStroke();
 
   b = new Bird();
-  p = new Pipe(width+100,int(random(200,600)));
-  p2 = new Pipe(width+375,int(random(200,600)));
+  p = new Pipe(width+100, int(random(200, 600)));
+  p2 = new Pipe(width+425, int(random(200, 600)));
 }
 
 void draw() {
@@ -19,7 +19,6 @@ void draw() {
   p2.render();
   p.update();
   p2.update();
-  
 }
 
 void keyPressed() {

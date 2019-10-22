@@ -5,11 +5,12 @@ class Pipe {
   float y; // Hullets øvre position
   float h; // Hullets størrelse
 
+
   // Constructor til nye pipes
   Pipe(int tempX, int tempY) {
     x = tempX;
     dx = -3;
-    w = 30;
+    w = 60;
     y = tempY;
     h = 175;
   }
@@ -24,9 +25,9 @@ class Pipe {
   // Opdater rørets position
   void update() {
     x += dx;
-    if (outOfCanvas() == true){
+    if (outOfCanvas() == true) {
       x = width;
-      y = random(200,600);
+      y = random(200, 600);
     }
   }
 
@@ -38,7 +39,7 @@ class Pipe {
   boolean hit(Bird b) {
     return false;
   }
-  
+
   // Metode, der returnerer true, når røret er uden
   // for canvas. Ellers false
   boolean outOfCanvas() {
