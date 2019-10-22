@@ -8,10 +8,10 @@ class Pipe {
   // Constructor til nye pipes
   Pipe(int tempX, int tempY) {
     x = tempX;
-    dx = -1;
+    dx = -3;
     w = 30;
     y = tempY;
-    h = 150;
+    h = 175;
   }
 
   // Afbild røret på canvasset
